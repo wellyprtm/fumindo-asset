@@ -1,0 +1,1 @@
+# fumindo-asset
