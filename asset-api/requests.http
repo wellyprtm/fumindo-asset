@@ -1,0 +1,38 @@
+@baseUrl = http://localhost:3000
+
+### Daftar asset
+GET {{baseUrl}}/assets
+
+### Detail asset
+GET {{baseUrl}}/assets/1
+
+### Tambah asset
+POST {{baseUrl}}/assets
+Content-Type: application/json
+
+{
+  "assetName": "Kertas A4",
+  "stockQuantity": 100,
+  "category": "Consumable"
+}
+
+### Update parsial
+PUT {{baseUrl}}/assets/1
+Content-Type: application/json
+
+{
+  "stockQuantity": 150
+}
+
+### Hapus asset
+DELETE {{baseUrl}}/assets/1
+
+### Uji validasi (harus 400)
+POST {{baseUrl}}/assets
+Content-Type: application/json
+
+{
+  "assetName": "",
+  "stockQuantity": -1,
+  "category": "Lainnya"
+}
