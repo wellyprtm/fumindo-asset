@@ -46,7 +46,7 @@ onMounted(fetchAssets)
 </script>
 
 <template>
-  <v-app>
+  <v-app theme="light">
     <v-app-bar color="primary" title="Manajemen Aset" />
 
     <v-main>
